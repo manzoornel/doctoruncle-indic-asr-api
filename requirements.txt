@@ -1,0 +1,4 @@
+
+fastapi
+uvicorn
+git+https://github.com/AI4Bharat/IndicASR
