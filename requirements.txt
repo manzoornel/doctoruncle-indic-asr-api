@@ -1,4 +1,4 @@
 
 fastapi
 uvicorn
-git+https://github.com/AI4Bharat/IndicASR
+git+https://ghproxy.com/https://github.com/AI4Bharat/IndicASR.git

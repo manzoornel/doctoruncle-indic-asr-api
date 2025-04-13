@@ -15,10 +15,9 @@ async def transcribe(audio: UploadFile = File(...)):
             tmp.write(content)
             tmp_path = tmp.name
 
-        # Run inference
         transcription = predict(model, tmp_path)
-
         os.remove(tmp_path)
+
         return {"transcription": transcription}
     except Exception as e:
         return {"error": str(e)}

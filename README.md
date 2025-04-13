@@ -1,7 +1,7 @@
 
-# Indic Conformer ASR API (Malayalam)
+# Doctor Uncle Indic Conformer ASR API
 
-This is a FastAPI backend using AI4Bharat's Indic Conformer ASR model for Malayalam speech-to-text conversion.
+This app uses AI4Bharat's Indic Conformer ASR model for Malayalam speech-to-text conversion.
 
 ## API Endpoint
 
@@ -9,15 +9,17 @@ POST /transcribe
 
 ### Request:
 - Multipart/form-data
-- Field: "audio" (.wav file)
+- Field: "audio" (.wav or .mp3)
 
 ### Response:
-- JSON with transcription in Malayalam Unicode
+```json
+{
+  "transcription": "മലയാളം വാക്കുകൾ ഇവിടെ വരും"
+}
+```
 
-## Deploy Instructions (Render.com)
-1. Upload to GitHub
-2. Create new Web Service on https://render.com
-3. Use:
-   - Python version: 3.10+
-   - Build command: `pip install -r requirements.txt`
-   - Start command: `uvicorn main:app --host 0.0.0.0 --port 10000`
+## Deployment Instructions (Render)
+
+- Python version: 3.10 (set via runtime.txt)
+- Build command: pip install -r requirements.txt
+- Start command: uvicorn main:app --host 0.0.0.0 --port 10000
