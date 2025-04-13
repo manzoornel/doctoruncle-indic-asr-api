@@ -1,12 +1,13 @@
 
-# Doctor Uncle Indic Conformer ASR API (Self-Contained)
+# Doctor Uncle ASR API - Final Local Version
 
-This is a local, self-contained FastAPI deployment for Malayalam speech-to-text using Indic Conformer model.
+This version runs a local copy of IndicASR (mocked) and works 100% offline from GitHub.
 
-## Deploy on Render
+- `main.py`: FastAPI app
+- `IndicASR/`: Local model
+- `requirements.txt`: Dependencies
+- `runtime.txt`: Python 3.10
 
-- Python version: 3.10 (runtime.txt included)
+### Render Deployment
 - Build command: pip install -r requirements.txt
 - Start command: uvicorn main:app --host 0.0.0.0 --port 10000
-
-NOTE: This version does not clone IndicASR from GitHub — it includes the module locally.
